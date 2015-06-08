@@ -27,8 +27,6 @@ public class Grid {
 //                }
 //            }
 //        }
-
-        significantCells.add(aliveCells.get(0));
-        return significantCells;
+        return aliveCells;
     }
 }

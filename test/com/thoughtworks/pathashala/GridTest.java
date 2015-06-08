@@ -31,4 +31,17 @@ public class GridTest {
 
         assertEquals(expectedCells, actualCells);
     }
+
+    @Test
+    public void testGetAllNeighboursForACellWithMultipleCellsAliveOnlyAroundIt() throws Exception {
+        ArrayList<Cell> aliveCells = new ArrayList<>();
+        aliveCells.add(new Cell(1, 1));
+        aliveCells.add(new Cell(1, 2));
+        Grid grid = new Grid(aliveCells);
+
+        ArrayList<Cell> actualCells = grid.getNeighbours(new Cell(2, 2));
+        ArrayList<Cell> expectedCells = aliveCells;
+
+        assertEquals(expectedCells, actualCells);
+    }
 }
