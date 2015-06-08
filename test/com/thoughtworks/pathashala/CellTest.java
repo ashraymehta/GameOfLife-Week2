@@ -15,7 +15,7 @@ public class CellTest {
     }
 
     @Test
-    public void testCellsAreNotEqualWhenTheyreDontHaveTheSamePosition() throws Exception {
+    public void testCellsAreNotEqualWhenTheyDontHaveTheSamePosition() throws Exception {
         Cell firstCell = new Cell(1, 1);
         Cell secondCell = new Cell(3, 3);
 
