@@ -24,7 +24,7 @@ public class GridTest {
     }
 
     @Test
-    public void testGetAllNeighboursForACell() throws Exception {
+    public void testGetAllNeighboursForACellWithASingleCellAlive() throws Exception {
         ArrayList<int[]> aliveCells = new ArrayList<>();
         aliveCells.add(new int[]{1, 1});
         Grid grid = new Grid(aliveCells);
