@@ -1,5 +1,7 @@
 package com.thoughtworks.pathashala;
 
+import java.util.ArrayList;
+
 public class Cell {
     int x, y;
 
@@ -20,10 +22,17 @@ public class Cell {
 
     }
 
-    @Override
-    public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        return result;
+    public ArrayList<Cell> getNeighbours() {
+        ArrayList<Cell> neighbours = new ArrayList<Cell>();
+        neighbours.add(new Cell(this.x - 1, this.y - 1));
+        neighbours.add(new Cell(this.x, this.y - 1));
+        neighbours.add(new Cell(this.x + 1, this.y - 1));
+        neighbours.add(new Cell(this.x - 1, this.y));
+        neighbours.add(new Cell(this.x, this.y));
+        neighbours.add(new Cell(this.x + 1, this.y));
+        neighbours.add(new Cell(this.x - 1, this.y + 1));
+        neighbours.add(new Cell(this.x, this.y + 1));
+        neighbours.add(new Cell(this.x + 1, this.y + 1));
+        return neighbours;
     }
 }
